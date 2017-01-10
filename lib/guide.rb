@@ -15,5 +15,11 @@ attr_reader :restaurants
   end
 
   def introduction
-  end 
+    puts "\n\n<<<Welcome to food finder>>>\n\n"
+    puts "This is an interactive guide to help you find the food that you crave.\n\n"
+  end
+
+  def conclusion
+    puts "\n<<< Goodbye and Bon Appetit! >>>\n\n\n"
+  end
 end

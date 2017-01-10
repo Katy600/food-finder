@@ -15,4 +15,9 @@ describe 'Guide' do
       guide = Guide.new
       expect(guide).to respond_to :introduction
   end
+
+  it 'responds to conclusion' do
+      guide = Guide.new
+      expect(guide).to respond_to :conclusion
+  end
 end
