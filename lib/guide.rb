@@ -5,7 +5,15 @@ attr_reader :restaurants
     @restaurants
   end
 
-  def launch!(something)
-
+  def launch!
+    #introduction
+    #action loop
+    #What do you want to do?(list, find, add, quit)
+    #do that action
+    #repeat until user quits
+    #conclusion
   end
+
+  def introduction
+  end 
 end

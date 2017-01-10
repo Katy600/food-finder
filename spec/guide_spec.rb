@@ -10,4 +10,9 @@ describe 'Guide' do
       guide = Guide.new
       expect(guide).to respond_to :launch!
   end
+
+  it 'responds to introduction' do
+      guide = Guide.new
+      expect(guide).to respond_to :introduction
+  end
 end
