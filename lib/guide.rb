@@ -16,19 +16,19 @@ class Guide
   def launch!
     introduction
     #action loop
-    loop do
+    result = nil
+    until result == :quit
+
       #What do you want to do?(list, find, add, quit)
       print "> "
       user_response = gets.chomp
       #do that action
       result = do_action(user_response)
-      #repeat until user quits
-      break if result == :quit
     end
     conclusion
   end
 
-  def user_response(action)
+  def do_action(action)
     case action
     when 'list'
       puts 'Listing...'
@@ -40,7 +40,7 @@ class Guide
       return :quit
     else
       puts "\n I don't understand that command.\n"
-    end 
+    end
   end
 
   def introduction
