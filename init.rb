@@ -12,3 +12,6 @@ $:.unshift(File.join(APP_ROOT))
 
 require 'lib/guide'
 require 'spec/guide_spec'
+
+guide = Guide.new('restaurants.txt')
+guide.launch!
