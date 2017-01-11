@@ -20,4 +20,6 @@ describe Restaurant do
     expect(Restaurant).to have_received(:saved_restaurants)
   end
 
+
+
 end
