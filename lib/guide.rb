@@ -18,14 +18,17 @@ class Guide
     #action loop
     result = nil
     until result == :quit
-
-      #What do you want to do?(list, find, add, quit)
-      print "> "
-      user_response = gets.chomp
-      #do that action
-      result = do_action(user_response)
+      action = get_action
+      result = do_action(action)
     end
     conclusion
+  end
+
+  def get_action
+    print "> "
+    user_response = gets.chomp
+    action = user_response.downcase.strip
+    return action
   end
 
   def do_action(action)
