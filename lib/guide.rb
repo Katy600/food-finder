@@ -1,8 +1,16 @@
+require 'restaurant'
 class Guide
-attr_reader :restaurants
 
   def initialize(path=nil)
-    @restaurants
+     Restaurant.filepath = path
+    if Restaurant.file_exists?
+      puts "Found restaurant file"
+    elsif Restaurant.create_file
+      puts "Created restaurant file"
+    else
+      puts "Exiting.\n\n"
+      exit!
+    end
   end
 
   def launch!

@@ -1,6 +1,9 @@
 class Restaurant
 
-  @@file_path = nil #class variable for the file path
+  @@filepath = nil #class variable for the file path
+  def self.filepath=(path=nil)
+    @@filepath = File.join(APP_ROOT, path)
+  end
 
   def self.file_exists? #class method because it has self at the begining
   #restaurant class should know if the restaurant file exists
