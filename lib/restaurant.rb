@@ -35,6 +35,18 @@ attr_accessor :name, :cuisine, :price
     #return instances of restaurant
   end
 
+  def self.build_from_question
+    args = {}
+    print 'Restaurant name:  '
+    args[:name] = gets.chomp.strip
+    print 'Cuisine type:  '
+    args[:cuisine] = gets.chomp.strip
+    print 'Average price:  '
+    args[:price] = gets.chomp.strip
+
+    return self.new(args)
+  end
+
   def initialize(args={})
     @name     = args[:name]    || ""
     @cuisine  = args[:cuisine] || ""
