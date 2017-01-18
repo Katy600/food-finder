@@ -1,2 +1,6 @@
 ["Katy's restaurant", nil, "Expensive"].join('	')
 ["Katy's", nil, "Cheap"].join('	')
+["Ed's", "American diner", "5"].join('	')
+#{[@name, @cuisine, @price]}.join("\t")\n
+#{[@name, @cuisine, @price]}.join("\t")\n
+Katy's	Hungarian	20

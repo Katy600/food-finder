@@ -38,8 +38,9 @@ attr_accessor :name, :cuisine, :price
   def save
     return false unless Restaurant.file_usable?
     File.open(@@filepath, 'a') do |file|
-      file.puts "#{[@name, @cusine, @price]}.join('\t')\n"
+      file.puts "#{[@name, @cuisine, @price].join("\t")}\n"
     end
     return true
   end
+
 end
