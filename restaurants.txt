@@ -1,0 +1,2 @@
+["Katy's restaurant", nil, "Expensive"].join('	')
+["Katy's", nil, "Cheap"].join('	')
