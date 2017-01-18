@@ -35,6 +35,12 @@ attr_accessor :name, :cuisine, :price
     #return instances of restaurant
   end
 
+  def initialize(args={})
+    @name     = args[:name]    || ""
+    @cuisine  = args[:cuisine] || ""
+    @price    = args[:price]   || ""
+  end
+
   def save
     return false unless Restaurant.file_usable?
     File.open(@@filepath, 'a') do |file|
